@@ -1,5 +1,5 @@
-import "./Canvas.module.css";
+import styles from "./Canvas.module.css";
 
 export default function Canvas() {
-  return <section className="canvas">Product Image Goes Here</section>;
+  return <section className={styles.canvas}>Product Image Goes Here</section>;
 }
