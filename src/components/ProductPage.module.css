@@ -1,0 +1,4 @@
+.product {
+  display: grid;
+  grid-template-columns: 52rem 25rem;
+}
