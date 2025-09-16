@@ -40,3 +40,15 @@
   top: 80%;
   transform: translateY(-50%);
 }
+
+.labelTop,
+.labelLeft,
+.labelRight {
+  cursor: pointer;
+}
+
+.labelTop:hover,
+.labelLeft:hover,
+.labelRight:hover {
+  opacity: 0.5;
+}

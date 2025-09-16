@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./MaterialButton.module.css";
 
 const MaterialButton = () => {
@@ -20,11 +20,28 @@ const MaterialButton = () => {
     setIndex((prev) => (prev + 1) % materials.length);
   };
 
+  const handleLabelClick = (material) => {
+    const newIndex = materials.indexOf(material);
+    setIndex(newIndex);
+  };
+
   return (
     <div className={styles.wrapper}>
-      <div className={styles.labelTop}>Gold</div>
-      <div className={styles.labelLeft}>Silver</div>
-      <div className={styles.labelRight}>Black</div>
+      <div className={styles.labelTop} onClick={() => handleLabelClick("gold")}>
+        Gold
+      </div>
+      <div
+        className={styles.labelLeft}
+        onClick={() => handleLabelClick("silver")}
+      >
+        Silver
+      </div>
+      <div
+        className={styles.labelRight}
+        onClick={() => handleLabelClick("black")}
+      >
+        Black
+      </div>
 
       <button onClick={handleClick} className={styles.button}>
         <svg
