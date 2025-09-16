@@ -1,10 +1,9 @@
-.container {
+/* .container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: var(--16, 1rem);
-  /* align-self: stretch; */
-}
+} */
 
 .headingBox {
   display: flex;
@@ -42,7 +41,7 @@
   padding: var(--24, 1.5rem) 0;
   flex-direction: column;
   align-items: flex-start;
-  gap: var(--8, 0.5rem);
+  /* gap: var(--8, 0.5rem); */
   align-self: stretch;
   border-top: 1px solid #171616;
   border-bottom: 1px solid #171616;
@@ -60,6 +59,7 @@
   line-height: var(--16, 1rem); /* 100% */
   letter-spacing: 0.03rem;
   text-transform: uppercase;
+  margin-bottom: 0.25rem; /* Minskar avståndet till beskrivningen */
 }
 
 .description {
@@ -74,4 +74,5 @@
   line-height: var(--20, 1.25rem); /* 125% */
   letter-spacing: -0.02rem;
   text-transform: capitalize;
+  margin-top: 0.25rem;
 }
