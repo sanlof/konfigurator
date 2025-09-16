@@ -1,4 +1,5 @@
 .product {
   display: grid;
-  grid-template-columns: 52rem 25rem;
+  grid-template-columns: auto 25rem;
+  gap: 1.5rem;
 }
