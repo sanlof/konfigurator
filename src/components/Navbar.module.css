@@ -1,0 +1,31 @@
+.navbar {
+  display: flex;
+  width: 80rem;
+  padding: 1rem, 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  max-height: 2.5rem;
+}
+
+.navLinks {
+  display: flex;
+  padding: 0.25rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  list-style-type: none;
+}
+
+a {
+  color: #4e4e4e;
+  padding: 0.25rem;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1rem; /* 100% */
+  text-transform: uppercase;
+}
