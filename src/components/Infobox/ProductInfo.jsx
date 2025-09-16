@@ -1,11 +1,13 @@
+import styles from "./Infobox.module.css";
+
 export default function ProductInfo() {
   return (
-    <div>
-      <div>
+    <div className={styles.container}>
+      <div className={styles.headingBox}>
         <h2>Lamp 02</h2>
         <p>499 SEK</p>
       </div>
-      <div>
+      <div className={styles.descriptionBox}>
         <h3>Description</h3>
         <p>
           The Lava Lamp Model 02 brings a modern twist to a classic design.
