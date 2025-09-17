@@ -1,0 +1,51 @@
+.button {
+  display: flex;
+  justify-content: center;
+  height: 3.5rem;
+  width: 5.5rem;
+  align-items: center;
+  gap: 0.625rem;
+
+  flex-shrink: 0;
+  border: 1px solid #171616;
+  color: #171616;
+  font-family: var(--Font-Family-Font-Family, "Hanken Grotesk");
+  background: #f5f3f0;
+}
+
+.button:hover {
+  box-shadow: -2px 2px 5px 0 rgba(0, 0, 0, 0.25);
+}
+
+.button:active {
+  border: 1px solid #171616;
+  background: var(--Primary-F5F3F0, #f5f3f0);
+  box-shadow: -2px 2px 5px 0 rgba(0, 0, 0, 0.25) inset;
+}
+
+/*Button variants for specific buttons */
+.color {
+  width: 5.5rem;
+  font-size: var(--16, 1rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--16, 1rem); /* 100% */
+  text-transform: capitalize;
+}
+
+.cart {
+  color: #171616;
+  width: 11.5625rem;
+  padding: 1rem;
+  font-family: var(--Font-Family-Font-Family, "Hanken Grotesk");
+  font-size: var(--20, 1.25rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--20, 1.25rem); /* 100% */
+  text-transform: uppercase;
+}
+
+.favorite {
+  width: 11.5625rem;
+  padding: o.5rem;
+}
