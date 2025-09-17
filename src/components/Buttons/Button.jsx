@@ -21,7 +21,23 @@ export default function Button({ children, variant = "default", onClick }) {
   return (
     <button className={classNames.join(" ")} onClick={handleClick}>
       {variant === "favorite" ? (
-        <span>{isFavorite ? "❤️" : "🤍"}</span> // Change to the icons
+        <span>
+          {isFavorite ? (
+            <img
+              src="/icons/mdi-light_heart-bold.png"
+              alt="Marked as favorite"
+              width="40"
+              height="40"
+            />
+          ) : (
+            <img
+              src="/icons/mdi-light_heart.png"
+              alt="Not marked as favorite"
+              width="40"
+              height="40"
+            />
+          )}
+        </span>
       ) : (
         children
       )}

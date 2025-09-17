@@ -1,10 +1,11 @@
 .button {
   display: flex;
-  padding: 0.5rem var(--16, 1rem);
   justify-content: center;
   height: 3.5rem;
+  width: 5.5rem;
   align-items: center;
   gap: 0.625rem;
+
   flex-shrink: 0;
   border: 1px solid #171616;
   color: #171616;
@@ -35,6 +36,7 @@
 .cart {
   color: #171616;
   width: 11.5625rem;
+  padding: 1rem;
   font-family: var(--Font-Family-Font-Family, "Hanken Grotesk");
   font-size: var(--20, 1.25rem);
   font-style: normal;
@@ -45,7 +47,5 @@
 
 .favorite {
   width: 11.5625rem;
-}
-
-.active {
+  padding: o.5rem;
 }
