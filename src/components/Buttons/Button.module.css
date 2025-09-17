@@ -49,3 +49,7 @@
   width: 11.5625rem;
   padding: o.5rem;
 }
+
+.active {
+  background: #f5f3f0;
+}
