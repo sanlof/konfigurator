@@ -1,0 +1,56 @@
+/* Remove default browser styling from fieldset and legend */
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  min-inline-size: unset;
+}
+
+legend {
+  padding: 0;
+  margin-bottom: 0.5rem;
+  font-size: inherit;
+  font-weight: inherit;
+  background: none;
+}
+
+.configChoices {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  margin-top: 1.4rem;
+}
+
+.fieldset {
+  display: flex;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.legend {
+  color: #4e4e4e;
+  font-family: var(--Font-Family-Font-Family, "Hanken Grotesk");
+  font-size: var(--16, 1rem);
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--16, 1rem); /* 100% */
+  letter-spacing: 0.03rem;
+  text-transform: uppercase;
+}
+
+.colorFieldset {
+  gap: 1rem;
+}
+
+.spookyFieldset {
+  gap: 1rem;
+}
+.materialFieldset {
+  padding-top: 0.5rem;
+  padding-left: 0.25rem;
+  gap: 1rem;
+}
+
+.purchaseFieldset {
+  gap: 0rem;
+}
