@@ -1,7 +1,12 @@
 import { useState } from "react";
 import styles from "./Button.module.css";
 
-export default function Button({ children, variant = "default", onClick }) {
+export default function Button({
+  children,
+  variant = "default",
+  onClick,
+  isActive = false,
+}) {
   const [isFavorite, setIsFavorite] = useState(false);
 
   function handleClick() {
@@ -16,7 +21,7 @@ export default function Button({ children, variant = "default", onClick }) {
   if (variant === "color") classNames.push(styles.color);
   if (variant === "cart") classNames.push(styles.cart);
   if (variant === "favorite") classNames.push(styles.favorite);
-  if (isFavorite) classNames.push(styles.active);
+  if (isFavorite || isActive) classNames.push(styles.active);
 
   return (
     <button className={classNames.join(" ")} onClick={handleClick}>

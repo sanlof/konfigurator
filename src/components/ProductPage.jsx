@@ -7,7 +7,7 @@ export default function ProductPage() {
   const [config, setConfig] = useState({
     // default lamp settings
     spooky: false, // set to "off" by default
-    // color: "orange", <- to be implemented
+    color: null, //should be a color by default?
     // material: "silver", <- to be implemented
   });
 

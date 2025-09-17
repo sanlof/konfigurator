@@ -8,8 +8,20 @@ export default function ConfigChoices({ config, updateConfig }) {
     <form className={styles.configChoices}>
       <fieldset className={`${styles.fieldset} ${styles.colorFieldset}`}>
         <legend className={styles.legend}>Color</legend>
-        <Button>Orange</Button>
-        <Button>Blue</Button>
+        <Button
+          variant="color"
+          isActive={config.color === "orange"}
+          onClick={() => updateConfig("color", "orange")}
+        >
+          Orange
+        </Button>
+        <Button
+          variant="color"
+          isActive={config.color === "blue"}
+          onClick={() => updateConfig("color", "blue")}
+        >
+          Blue
+        </Button>
       </fieldset>
       <fieldset className={styles.spookyFieldset}>
         <legend className={styles.legend}>Spooky?</legend>
