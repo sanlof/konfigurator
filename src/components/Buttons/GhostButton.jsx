@@ -10,7 +10,6 @@ export default function GhostButton({ value, onChange }) {
 
   return (
     <section className={styles.Spooky}>
-      <h3>Spooky?</h3>
       <button
         className={`${styles.GhostButton} ${value ? styles.on : styles.off}`}
         onClick={handleClick}
