@@ -43,6 +43,7 @@
   font-weight: 400;
   line-height: var(--20, 1.25rem); /* 100% */
   text-transform: uppercase;
+  border-right: 0;
 }
 
 .favorite {
@@ -50,6 +51,8 @@
   padding: o.5rem;
 }
 
-.active {
+.active,
+.active:hover {
   background: #f5f3f0;
+  box-shadow: -2px 2px 5px 0 rgba(0, 0, 0, 0.25) inset;
 }
