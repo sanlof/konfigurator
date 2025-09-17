@@ -5,7 +5,7 @@ import ConfigChoices from "./ConfigChoices";
 export default function Infobox({ config, updateConfig }) {
   return (
     <section className={styles.infobox}>
-      <ProductInfo />
+      <ProductInfo config={config} />
       <ConfigChoices config={config} updateConfig={updateConfig} />
     </section>
   );

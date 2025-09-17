@@ -1,11 +1,11 @@
 import styles from "./ProductInfo.module.css";
 
-export default function ProductInfo() {
+export default function ProductInfo({ config }) {
   return (
     <div className={styles.container}>
       <div className={styles.headingBox}>
         <h2 className={styles.heading}>LAMP 02</h2>
-        <p className={styles.price}>499 SEK</p>
+        <p className={styles.price}>{config.spooky ? 1750 : 1600} SEK</p>
       </div>
       <div className={styles.descriptionBox}>
         <h3 className={styles.subheading}>Description</h3>
