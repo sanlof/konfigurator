@@ -15,6 +15,7 @@ export default function GhostButton({ value, onChange }) {
         onClick={handleClick}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
+        type="button"
       >
         {value ? (
           <img src="/icons/solar_ghost-bold.png" alt="Ghost icon filled" />

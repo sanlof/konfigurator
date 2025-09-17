@@ -24,7 +24,11 @@ export default function Button({
   if (isFavorite || isActive) classNames.push(styles.active);
 
   return (
-    <button className={classNames.join(" ")} onClick={handleClick}>
+    <button
+      className={classNames.join(" ")}
+      onClick={handleClick}
+      type="button"
+    >
       {variant === "favorite" ? (
         <span>
           {isFavorite ? (

@@ -43,7 +43,7 @@ const MaterialButton = () => {
         Black
       </div>
 
-      <button onClick={handleClick} className={styles.button}>
+      <button onClick={handleClick} className={styles.button} type="button">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="56"
