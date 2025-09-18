@@ -1,28 +1,25 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styles from "./MaterialButton.module.css";
 
-const MaterialButton = () => {
-  const materials = ["gold", "black", "silver"];
+const materials = ["gold", "black", "silver"];
 
-  const [index, setIndex] = useState(0);
+const angles = {
+  gold: 0,
+  black: 130,
+  silver: 225,
+};
 
-  const angles = {
-    gold: 0,
-    black: 130,
-    silver: 225,
-  };
+const MaterialButton = ({ material, setMaterial }) => {
+  const rotation = angles[material] || 0;
 
-  const currentMaterial = materials[index];
-  const rotation = angles[currentMaterial];
-
-  // Save current material
   const handleClick = () => {
-    setIndex((prev) => (prev + 1) % materials.length);
+    const currentIndex = materials.indexOf(material);
+    const nextIndex = (currentIndex + 1) % materials.length;
+    setMaterial(materials[nextIndex]);
   };
 
-  const handleLabelClick = (material) => {
-    const newIndex = materials.indexOf(material);
-    setIndex(newIndex);
+  const handleLabelClick = (mat) => {
+    setMaterial(mat);
   };
 
   return (

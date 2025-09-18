@@ -8,7 +8,7 @@ export default function ProductPage() {
     // default lamp settings
     spooky: false, // set to "off" by default
     color: null, //should be a color by default?
-    // material: "silver", <- to be implemented
+    material: "silver",
   });
 
   const updateConfig = (key, value) => {
