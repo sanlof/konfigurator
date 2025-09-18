@@ -1,0 +1,52 @@
+/* Spooky Container */
+
+.Spooky {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+}
+
+.Spooky h3 {
+  grid-column: span 2;
+  color: #4e4e4e;
+  font-family: "Hanken Grotesk";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1rem;
+  letter-spacing: 0.03rem;
+  text-transform: uppercase;
+  margin: 0 0 0.5rem;
+}
+
+.addPrice {
+  text-align: right;
+  color: #4e4e4e;
+}
+
+/* Button */
+.GhostButton {
+  background: #f5f3f0;
+  border-radius: 0;
+  border: 1px solid #000;
+  display: grid;
+  grid-template-columns: 2.5rem 2.5rem;
+  width: 7.5rem;
+  padding: 0.5rem 1rem;
+  gap: 0.5rem;
+  align-items: center;
+  text-align: center;
+  font-family: inter;
+  color: #000;
+  background: #f5f3f0;
+}
+.GhostButton.on {
+  box-shadow: -2px 2px 5px 0 rgba(0, 0, 0, 0.25) inset;
+}
+.GhostButton.off:hover {
+  box-shadow: -2px 2px 5px 0 rgba(0, 0, 0, 0.25);
+}
+.GhostButton img {
+  width: 2.5rem;
+  height: 2.5rem;
+}

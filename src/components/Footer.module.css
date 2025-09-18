@@ -1,0 +1,37 @@
+.footer {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  border-top: 1px solid #000;
+  margin-top: 3.69rem;
+  padding: 4.44rem 1.25rem calc(7rem + 4.25rem);
+  row-gap: 4.75rem;
+  column-gap: 7.75rem;
+  background: url(/public/logo-footer.svg) bottom center no-repeat;
+}
+
+.footer section {
+  max-width: 9.5rem;
+}
+
+/* Button label small */
+.footer h2 {
+  margin: 0 0 0.62rem 0;
+  padding: 0;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1rem;
+  text-transform: capitalize;
+  color: #a89d8c;
+}
+
+.footer a {
+  color: var(--Primary-0C0A07, #0c0a07);
+  font-family: var(--Font-Family-Font-Family, "Hanken Grotesk");
+  font-size: var(--16, 1rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--16, 1rem); /* 100% */
+  text-transform: capitalize;
+  padding: 0;
+}
