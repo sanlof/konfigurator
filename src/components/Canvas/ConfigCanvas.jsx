@@ -12,6 +12,16 @@ export default function ConfigCanvas({ config }) {
     const cooler = spline.findObjectByName("cooler");
     const base = spline.findObjectByName("base");
 
+    // const backdrop = spline.findObjectByName("Backdrop");
+
+    // if (backdrop) {
+    //   console.log("backdrop found");
+    //   if (backdrop.type === "Mesh") {
+    //     console.log("backdrop has mesh");
+    //     backdrop.color = "#ff0000";
+    //   }
+    // }
+
     if (cooler && base) {
       console.log("cooler & base found");
       if (cooler.type === "Mesh" && base.type === "Mesh") {
@@ -62,15 +72,22 @@ export default function ConfigCanvas({ config }) {
     }
   }
 
+  // Dynamisk URL baserat på config.color
+  function getSceneUrl(color) {
+    const colorMap = {
+      blue: "https://prod.spline.design/IkEvV-dRyFh-2xlT/scene.splinecode",
+      orange: "https://prod.spline.design/JTSsTAxxvly2nNHW/scene.splinecode",
+    };
+    return colorMap[color] || colorMap.orange; // orange is default
+  }
+  const sceneUrl = getSceneUrl(config.color);
+
   return (
     <section className={styles.canvas}>
-      <p>Color: {config.color || "Not selected"}</p>
+      {/* <p>Color: {config.color || "Not selected"}</p>
       {/* <p>Material: {config.material || "Not selected"}</p>
       {config.spooky ? <p>Spooky ON</p> : <p>Spooky OFF</p>} */}
-      <Spline
-        scene="https://prod.spline.design/IkEvV-dRyFh-2xlT/scene.splinecode"
-        onLoad={onLoad}
-      />
+      <Spline scene={sceneUrl} onLoad={onLoad} />
     </section>
   );
 }
