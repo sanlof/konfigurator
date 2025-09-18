@@ -24,6 +24,7 @@ export default function ConfigCanvas({ config }) {
   return (
     <section className={styles.canvas}>
       <p>Color: {config.color || "Not selected"}</p>
+      <p>Material: {config.material || "Not selected"}</p>
       {config.spooky ? <p>Spooky ON</p> : <p>Spooky OFF</p>}
       <Spline
         scene="https://prod.spline.design/IkEvV-dRyFh-2xlT/scene.splinecode"

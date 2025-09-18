@@ -32,7 +32,10 @@ export default function ConfigChoices({ config, updateConfig }) {
       </fieldset>
       <fieldset className={`${styles.fieldset} ${styles.materialFieldset}`}>
         <legend className={styles.legend}>Material</legend>
-        <MaterialButton />
+        <MaterialButton
+          material={config.material}
+          setMaterial={(mat) => updateConfig("material", mat)}
+        />
       </fieldset>
       <fieldset className={`${styles.fieldset} {}`}>
         <Button variant="cart">Add to cart</Button>
