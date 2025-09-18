@@ -1,5 +1,5 @@
 import styles from "./ProductPage.module.css";
-import Canvas from "./Canvas/Canvas";
+import ConfigCanvas from "./Canvas/ConfigCanvas";
 import Infobox from "./Infobox/Infobox";
 import { useState } from "react";
 
@@ -25,7 +25,7 @@ export default function ProductPage() {
         Products / Lamps / <strong>Lamp 02</strong>
       </nav>
       <section className={styles.product}>
-        <Canvas config={config} />
+        <ConfigCanvas config={config} />
         <Infobox config={config} updateConfig={updateConfig} />
       </section>
     </main>
