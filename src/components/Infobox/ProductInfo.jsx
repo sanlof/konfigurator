@@ -26,15 +26,10 @@ export default function ProductInfo({ config }) {
         </h3>
         {isDescriptionOpen && (
           <p className={styles.description}>
-            Immerse yourself in the hypnotic beauty of our Lamp 02 lava lamp.
-            This modern interpretation of the classic design features a premium
-            aluminum base with customizable finishes and mesmerizing wax
-            formations that dance through vibrant liquid. With enhanced heating
-            technology, enjoy faster warm-up times and consistent performance.
-            Choose your perfect color combination and add our exclusive "Spooky"
-            mode for an eerie twist that transforms any space into a mysterious
-            sanctuary. Perfect for creating ambient lighting in bedrooms,
-            studios, or lounge areas.
+            Experience the hypnotic charm of a modern lava lamp. With a sleek
+            aluminum base, quick warm-up, and smooth flow, it’s a true statement
+            piece. Activate the exclusive Spooky mode to transform any room into
+            a mysterious retreat.
           </p>
         )}
       </div>
