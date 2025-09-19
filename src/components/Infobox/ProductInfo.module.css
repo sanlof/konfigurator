@@ -50,6 +50,10 @@
 .subheading {
   color: #4e4e4e;
   align-self: stretch;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.5rem;
 
   /* H3 */
   font-family: var(--Font-Family-Font-Family, "Hanken Grotesk");
@@ -60,6 +64,15 @@
   letter-spacing: 0.03rem;
   text-transform: uppercase;
   margin-bottom: 0rem; /* Minskar avståndet till beskrivningen */
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+  font-size: 0.8rem;
+}
+
+.arrowOpen {
+  transform: rotate(180deg);
 }
 
 .description {
@@ -73,6 +86,5 @@
   font-weight: 400;
   line-height: var(--20, 1.25rem); /* 125% */
   letter-spacing: -0.02rem;
-  text-transform: capitalize;
   margin-top: 0rem;
 }
