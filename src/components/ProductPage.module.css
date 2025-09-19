@@ -1,5 +1,8 @@
 .product {
   display: grid;
   grid-template-columns: auto 25rem;
+  grid-template-rows: 1fr;
   gap: 1.5rem;
+  align-items: stretch;
+  transition: all 0.1s ease; /* Hjälper Grid att räkna om */
 }
