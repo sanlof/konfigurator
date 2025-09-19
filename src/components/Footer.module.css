@@ -6,7 +6,7 @@
   padding: 4.44rem 1.25rem calc(7rem + 4.25rem);
   row-gap: 4.75rem;
   column-gap: 7.75rem;
-  background: url(/public/logo-footer.svg) bottom center no-repeat;
+  background: url(/logo-footer.svg) bottom center no-repeat;
 }
 
 .footer section {
