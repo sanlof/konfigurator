@@ -1,6 +1,6 @@
 .product {
   display: grid;
-  grid-template-columns: auto 25rem;
+  grid-template-columns: auto 25.3rem;
   grid-template-rows: 1fr;
   gap: 1.5rem;
   align-items: stretch;
