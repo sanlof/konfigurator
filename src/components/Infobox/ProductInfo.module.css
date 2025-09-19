@@ -79,7 +79,7 @@
   font-weight: 400;
   line-height: var(--20, 1.25rem); /* 125% */
   letter-spacing: -0.02rem;
-  margin-top: 0rem;
+  margin-top: 0.1rem;
   transition: all 0.3s ease;
   overflow: hidden;
 }
