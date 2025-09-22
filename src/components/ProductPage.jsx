@@ -25,11 +25,13 @@ export default function ProductPage() {
       <nav className={styles.sitemap}>
         Products / Lamps / <strong>Lamp 02</strong>
       </nav>
-      <section className={styles.product}>
-        <ConfigCanvas config={config} />
-        <Infobox config={config} updateConfig={updateConfig} />
+      <section>
+        <div className={styles.product}>
+          <ConfigCanvas config={config} />
+          <Infobox config={config} updateConfig={updateConfig} />
+        </div>
+        <Gallery config={config} />
       </section>
-      <Gallery config={config} />
     </main>
   );
 }
