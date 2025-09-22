@@ -1,0 +1,32 @@
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 19rem 19rem;
+  gap: 0.75rem;
+  height: 100%;
+  width: 100%;
+  padding-top: 3.6875rem;
+  /* padding-bottom: 0rem; */
+  /* height: 38.1875rem; */
+}
+
+.closeup {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.ghost {
+  grid-column: 2;
+  grid-row: 1 / 3; /* Spänner över båda raderna */
+}
+
+.full {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
