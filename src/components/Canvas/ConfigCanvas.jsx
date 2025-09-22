@@ -9,6 +9,27 @@ export default function ConfigCanvas({ config }) {
     setSplineApp(spline);
   }
 
+  useEffect(() => {
+    if (!splineApp) return;
+
+    const interval = setInterval(() => {
+      const controls = splineApp._controls?.orbitControls;
+      if (!controls) return;
+
+      clearInterval(interval);
+
+      // set to true to reach theta/phi limits
+      controls.rotationLimitsMode = 1;
+
+      controls.minPhi = Math.PI / 2.5;
+      controls.maxPhi = Math.PI / 3.1; // prevent from going below ground
+
+      controls.enablePan = false;
+    }, 50);
+
+    return () => clearInterval(interval); // cleanup on unmount
+  }, [splineApp]);
+
   // update main and lava color
   useEffect(() => {
     if (splineApp) {
