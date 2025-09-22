@@ -86,11 +86,11 @@ export default function ConfigCanvas({ config }) {
   function getColorForGhost(color) {
     switch (color) {
       case "orange":
-        return "#F1D4B0"; // valfri hex för orange
+        return "#F1D4B0";
       case "blue":
-        return "#B8B0F1"; // valfri hex för blue
+        return "#B8B0F1";
       default:
-        return "#F1D4B0"; // fallback
+        return "#F1D4B0";
     }
   }
 
