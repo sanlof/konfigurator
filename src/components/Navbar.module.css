@@ -29,3 +29,9 @@ a {
   line-height: 1rem; /* 100% */
   text-transform: uppercase;
 }
+
+a:hover {
+  color: inherit;
+  opacity: 0.5;
+  text-decoration: none;
+}

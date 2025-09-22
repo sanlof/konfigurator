@@ -4,6 +4,5 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 45rem; /* temporarily set height */
   border: 1px solid #171616;
 }
