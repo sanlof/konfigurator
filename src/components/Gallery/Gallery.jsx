@@ -20,36 +20,19 @@ export default function Gallery({ config }) {
     <section className={styles.gallery}>
       <img
         className={styles.closeup}
-        src="/images/gallery-placeholder-closeup.png"
+        src={`/images/${imageName}.closeup.png`}
         alt={`Close-up of lamp in ${config.color} with ${config.material} material`}
       />
       <img
         className={styles.ghost}
-        src="/images/gallery-placeholder-spooky.png"
+        src={`/images/${imageName}.ghost.png`}
         alt={`Ghost of lamp in ${config.color} with ${config.material} material`}
       />
       <img
         className={styles.full}
-        src="/images/gallery-placeholder.png"
+        src={`/images/${imageName}.png`}
         alt={`Full view of lamp in ${config.color} with ${config.material} material`}
       />
     </section>
-    // <section className={styles.gallery}>
-    //   <img
-    //     className={styles.closeup}
-    //     src={`/images/${imageName}.closeup.png`}
-    //     alt={`Close-up of lamp in ${config.color} with ${config.material} material`}
-    //   />
-    //   <img
-    //     className={styles.ghost}
-    //     src={`/images/${imageName}.ghost.png`}
-    //     alt={`Ghost of lamp in ${config.color} with ${config.material} material`}
-    //   />
-    //   <img
-    //     className={styles.full}
-    //     src={`/images/${imageName}.png`}
-    //     alt={`Full view of lamp in ${config.color} with ${config.material} material`}
-    //   />
-    // </section>
   );
 }
