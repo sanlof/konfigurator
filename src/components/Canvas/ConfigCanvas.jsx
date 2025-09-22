@@ -7,35 +7,18 @@ export default function ConfigCanvas({ config }) {
 
   function onLoad(spline) {
     setSplineApp(spline);
-
-    const ghost = spline.findObjectByName("Ghost");
-    const cooler = spline.findObjectByName("cooler");
-    const base = spline.findObjectByName("base");
-
-    // const backdrop = spline.findObjectByName("Backdrop");
-
-    // if (backdrop) {
-    //   console.log("backdrop found");
-    //   if (backdrop.type === "Mesh") {
-    //     console.log("backdrop has mesh");
-    //     backdrop.color = "#ff0000";
-    //   }
-    // }
-
-    if (cooler && base) {
-      console.log("cooler & base found");
-      if (cooler.type === "Mesh" && base.type === "Mesh") {
-        const color = getColorFromMaterial(config.material);
-        cooler.color = color;
-        base.color = color;
-        console.log(`Färg ändrad till ${color}!`);
-      }
-    }
-
-    if (ghost) {
-      ghost.visible = !!config.spooky;
-    }
   }
+
+  // update main and lava color
+  useEffect(() => {
+    if (splineApp) {
+      const main = splineApp.findObjectByName("main");
+      const lava = splineApp.findObjectByName("Lava");
+      const currentColor = config.color;
+      if (main) main.color = getColor(currentColor);
+      if (lava) lava.color = getColor(currentColor);
+    }
+  }, [config.color, splineApp]);
 
   // update material choice
   useEffect(() => {
@@ -60,6 +43,81 @@ export default function ConfigCanvas({ config }) {
     }
   }, [config.spooky, splineApp]);
 
+  // update ghost color
+  useEffect(() => {
+    if (splineApp) {
+      const ghost = splineApp.findObjectByName("Ghost");
+      if (ghost && ghost.type === "Mesh") {
+        ghost.color = getColorForGhost(config.color);
+      }
+    }
+  }, [splineApp, config.color]);
+
+  // update backdrop and pointlight colors
+  useEffect(() => {
+    if (splineApp) {
+      const backdrop = splineApp.findObjectByName("Backdrop");
+      const pointlight = splineApp.findObjectByName("PointLight");
+      const currentColor = config.color;
+
+      if (backdrop && backdrop.type === "Mesh") {
+        backdrop.color = getColorForBackdrop(currentColor);
+      }
+
+      if (pointlight) {
+        pointlight.color = getColorForLight(currentColor);
+      }
+    }
+  }, [splineApp, config.color]);
+
+  // main hexcodes
+  function getColor(color) {
+    switch (color) {
+      case "orange":
+        return "#FF7D3D";
+      case "blue":
+        return "#3F3FE9";
+      default:
+        return "#FF7D3D";
+    }
+  }
+
+  //ghost hexcodes
+  function getColorForGhost(color) {
+    switch (color) {
+      case "orange":
+        return "#F1D4B0";
+      case "blue":
+        return "#B8B0F1";
+      default:
+        return "#F1D4B0";
+    }
+  }
+
+  // background hexcodes
+  function getColorForBackdrop(color) {
+    switch (color) {
+      case "orange":
+        return "#57C8EA";
+      case "blue":
+        return "#6362F6";
+      default:
+        return "#57C8EA";
+    }
+  }
+
+  // pointlight hexcodes
+  function getColorForLight(color) {
+    switch (color) {
+      case "orange":
+        return "#FF982A";
+      case "blue":
+        return "#3F3FE9";
+      default:
+        return "#FF982A";
+    }
+  }
+
   // material hexcodes
   function getColorFromMaterial(material) {
     switch (material) {
@@ -69,25 +127,17 @@ export default function ConfigCanvas({ config }) {
         return "#A79763";
       case "black":
         return "#353535";
+      default:
+        return "#878787";
     }
   }
 
-  // Dynamisk URL baserat på config.color
-  function getSceneUrl(color) {
-    const colorMap = {
-      blue: "https://prod.spline.design/IkEvV-dRyFh-2xlT/scene.splinecode",
-      orange: "https://prod.spline.design/JTSsTAxxvly2nNHW/scene.splinecode",
-    };
-    return colorMap[color] || colorMap.orange; // orange is default
-  }
-  const sceneUrl = getSceneUrl(config.color);
-
   return (
     <section className={styles.canvas}>
-      {/* <p>Color: {config.color || "Not selected"}</p>
-      {/* <p>Material: {config.material || "Not selected"}</p>
-      {config.spooky ? <p>Spooky ON</p> : <p>Spooky OFF</p>} */}
-      <Spline scene={sceneUrl} onLoad={onLoad} />
+      <Spline
+        scene="https://prod.spline.design/jYOB5fDkobkOv9U0/scene.splinecode"
+        onLoad={onLoad}
+      />
     </section>
   );
 }
