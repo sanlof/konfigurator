@@ -1,6 +1,7 @@
 import styles from "./ProductPage.module.css";
 import ConfigCanvas from "./Canvas/ConfigCanvas";
 import Infobox from "./Infobox/Infobox";
+import Gallery from "./Gallery/Gallery";
 import { useState } from "react";
 
 export default function ProductPage() {
@@ -28,6 +29,7 @@ export default function ProductPage() {
         <ConfigCanvas config={config} />
         <Infobox config={config} updateConfig={updateConfig} />
       </section>
+      <Gallery config={config} />
     </main>
   );
 }
