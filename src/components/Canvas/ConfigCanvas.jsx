@@ -64,11 +64,11 @@ export default function ConfigCanvas({ config }) {
   function getColorFromMaterial(material) {
     switch (material) {
       case "silver":
-        return "#cccccc";
+        return "#878787";
       case "gold":
-        return "#caa625";
+        return "#A79763";
       case "black":
-        return "#1e1e1e";
+        return "#353535";
     }
   }
 
