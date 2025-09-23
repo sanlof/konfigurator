@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./MaterialButton.module.css";
 
 const materials = ["gold", "black", "silver"];

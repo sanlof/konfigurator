@@ -3,8 +3,8 @@ import styles from "./Gallery.module.css";
 export default function Gallery({ config }) {
   // Function to determine image name based on config
   const getImageName = (color, material, spooky) => {
-    const colorCode = color || "orange"; // default orange
-    const materialCode = material || "silver"; // default silver
+    const colorCode = color || "blue"; // default blue
+    const materialCode = material || "gold"; // default gold
 
     return `lamp-${colorCode}-${materialCode}`;
   };

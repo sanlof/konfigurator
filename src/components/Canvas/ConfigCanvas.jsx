@@ -78,7 +78,7 @@ export default function ConfigCanvas({ config }) {
       case "blue":
         return "#3F3FE9";
       default:
-        return "#FF7D3D";
+        return "#3F3FE9";
     }
   }
 
@@ -90,7 +90,7 @@ export default function ConfigCanvas({ config }) {
       case "blue":
         return "#B8B0F1";
       default:
-        return "#F1D4B0";
+        return "#B8B0F1";
     }
   }
 
@@ -102,7 +102,7 @@ export default function ConfigCanvas({ config }) {
       case "blue":
         return "#6362F6";
       default:
-        return "#57C8EA";
+        return "#6362F6";
     }
   }
 
@@ -114,7 +114,7 @@ export default function ConfigCanvas({ config }) {
       case "blue":
         return "#3F3FE9";
       default:
-        return "#FF982A";
+        return "#3F3FE9";
     }
   }
 
@@ -123,12 +123,12 @@ export default function ConfigCanvas({ config }) {
     switch (material) {
       case "silver":
         return "#878787";
-      case "gold":
-        return "#A79763";
       case "black":
         return "#353535";
+      case "gold":
+        return "#A79763";
       default:
-        return "#878787";
+        return "#A79763";
     }
   }
 

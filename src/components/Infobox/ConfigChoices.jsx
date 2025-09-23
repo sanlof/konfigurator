@@ -4,7 +4,7 @@ import Button from "../Buttons/Button";
 import MaterialButton from "../Buttons/MaterialButton";
 
 export default function ConfigChoices({ config, updateConfig }) {
-  const currentColor = config.color || "orange"; // orange is default
+  const currentColor = config.color || "blue"; // blue is default
 
   return (
     <form className={styles.configChoices}>
@@ -12,17 +12,17 @@ export default function ConfigChoices({ config, updateConfig }) {
         <legend className={styles.legend}>Color</legend>
         <Button
           variant="color"
-          isActive={currentColor === "orange"}
-          onClick={() => updateConfig("color", "orange")}
-        >
-          Orange
-        </Button>
-        <Button
-          variant="color"
           isActive={currentColor === "blue"}
           onClick={() => updateConfig("color", "blue")}
         >
           Blue
+        </Button>
+        <Button
+          variant="color"
+          isActive={currentColor === "orange"}
+          onClick={() => updateConfig("color", "orange")}
+        >
+          Orange
         </Button>
       </fieldset>
       <fieldset className={styles.spookyFieldset}>
