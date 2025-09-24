@@ -82,7 +82,7 @@ export default function ConfigCanvas({ config }) {
     }
   }
 
-  //ghost hexcodes
+  // ghost hexcodes
   function getColorForGhost(color) {
     switch (color) {
       case "orange":
@@ -95,6 +95,18 @@ export default function ConfigCanvas({ config }) {
   }
 
   // background hexcodes
+  function getColorForBackground(color) {
+    switch (color) {
+      case "orange":
+        return "#085160";
+      case "blue":
+        return "#282767";
+      default:
+        return "#282767";
+    }
+  }
+
+  // backdrop hexcodes
   function getColorForBackdrop(color) {
     switch (color) {
       case "orange":
@@ -132,8 +144,10 @@ export default function ConfigCanvas({ config }) {
     }
   }
 
+  const backgroundColor = getColorForBackground(config.color);
+
   return (
-    <section className={styles.canvas}>
+    <section className={styles.canvas} style={{ backgroundColor }}>
       <Spline
         scene="https://prod.spline.design/jYOB5fDkobkOv9U0/scene.splinecode"
         onLoad={onLoad}
