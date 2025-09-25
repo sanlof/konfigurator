@@ -1,12 +1,45 @@
-# React + Vite
+# Spooky Lights Konfigurator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Spooky Lights är en 3D-konfigurator där man kan designa sin egen lavalampa genom att välja olika färger, metaller och om man vill ha ett spöke som hovrar över lampan. Denna applikation använder ```React```, ```Three.js``` och ```Spline``` för att skapa en unik och rolig användarupplevelse med 3D-visualiseringar.
 
-Currently, two official plugins are available:
+## Funktioner
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Välj färg på lavan (blå eller orange)
+- Välj metallfinish på lampfoten (svart, silver eller guld)
+- Lägg till ett spöke som hovrar över lampan för en extra spooky effekt
 
-## Expanding the ESLint configuration
+Både 3D-objekten och konfigurations knappar uppdateras i realtid när användaren gör sina val.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- React: Frontend-ramverk för UI.
+- Three.js: För rendering av 3D-grafik.
+- Spline: För att skapa 3D-modellen.
+- SplineTool: Verktyg för att använda Spline-modeller med animationer i React.
+
+## Installation
+
+Följ dessa steg för att sätta upp projektet lokalt:
+
+1. Kloning av repository
+
+```bash
+git clone https://github.com/sanlof/konfigurator.git
+cd konfigurator
+```
+
+2. Installera beroenden
+
+```bash
+npm install
+```
+
+3. Starta applikationen
+
+```bash
+npm run dev
+```
+
+## Demo
+
+Det finns även en live demo här: https://spookylights.vercel.app
